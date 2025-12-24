@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* 1. Basic Options */
+    "target": "ES2024",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "removeComments": true,
+    "noEmitOnError": true,
+    "allowImportingTsExtensions": true,
+
+    /* 2. Strict Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    /* 3. Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+
+    /* 4. Module Resolution */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
