@@ -7,7 +7,10 @@
     "outDir": "./dist",
     "removeComments": true,
     "noEmitOnError": true,
+    "noEmit": true,
     "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
 
     /* 2. Strict Checking */
     "strict": true,
