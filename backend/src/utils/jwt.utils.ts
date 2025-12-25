@@ -1,7 +1,9 @@
-import jwt, { JwtPayload } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
+import type { JwtPayload } from "jsonwebtoken";
+import type { Types } from "mongoose";
 
 //generateToken
-export const generateToken = (userId: string): string => {
+export const generateToken = (userId: Types.ObjectId): string => {
   const secret = process.env.JWT_SECRET;
 
   if (!secret) {

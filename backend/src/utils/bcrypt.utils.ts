@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 
 const SALT_ROUNDS: number = 10;
 
-export const hashPassword = async (password: string): Promise<string> => {
+export const hashingPassword = async (password: string): Promise<string> => {
   try {
     return await bcrypt.hash(password, SALT_ROUNDS);
   } catch (error) {

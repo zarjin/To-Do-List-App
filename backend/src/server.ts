@@ -5,6 +5,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 import { connectedDB } from "./configs/db.config.ts";
+import authRoutes from "./routes/auth.routes.ts";
 
 dotenv.config();
 connectedDB();
@@ -24,6 +25,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (_req: Request, res: Response) => {
   res.status(200).send("Hello Todo App");
 });
+
+app.use("/api/auth", authRoutes);
 
 const PORT = Number(process.env.PORT) || 5000;
 
