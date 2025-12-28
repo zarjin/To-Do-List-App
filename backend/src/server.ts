@@ -4,13 +4,13 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
-import { connectedDB } from "./configs/db.config.ts";
+import { connectDB } from "./configs/db.config.ts";
 import authRoutes from "./routes/auth.routes.ts";
 import userRoutes from "./routes/user.routes.ts";
 import todoRoutes from "./routes/todo.routes.ts";
 
 dotenv.config();
-connectedDB();
+connectDB();
 
 const app = express();
 
