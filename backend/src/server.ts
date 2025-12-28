@@ -6,6 +6,8 @@ import cookieParser from "cookie-parser";
 
 import { connectedDB } from "./configs/db.config.ts";
 import authRoutes from "./routes/auth.routes.ts";
+import userRoutes from "./routes/user.routes.ts";
+import todoRoutes from "./routes/todo.routes.ts";
 
 dotenv.config();
 connectedDB();
@@ -27,6 +29,8 @@ app.get("/", (_req: Request, res: Response) => {
 });
 
 app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/todo", todoRoutes);
 
 const PORT = Number(process.env.PORT) || 5000;
 
